@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=BenchNine:300,700|Yantramanav:300,700|Open+Sans+Condensed:300|Yanone+Kaffeesatz:300,700|Dosis:400,500|PT+Sans+Narrow:400,700);
+body {
+  background: #A3B7A3;
+  margin: 0; }
+  body * {
+    font-family: "Yantramanav";
+    box-sizing: border-box; }
+  body header {
+    background: #f2f2f2;
+    padding: 10px 10px 0px 10px;
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    -webkit-box-shadow: 0 3px 2px -2px #023800;
+    box-shadow: 0 3px 2px -2px #023800;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    body header h1 {
+      margin-top: 0.2em;
+      margin-bottom: 0;
+      font-family: "Yantramanav";
+      font-weight: 300;
+      font-size: 55px; }
+      body header h1 .peque {
+        font-size: 20px; }
+        body header h1 .peque span {
+          font-weight: 700; }
+  body h4, body h5 {
+    margin: 0;
+    font-family: "Yantramanav";
+    font-weight: 300;
+    color: #353d2f; }
+    body h4 b, body h5 b {
+      font-weight: 700; }
+    body h4 span, body h5 span {
+      font-size: 16px; }
+  body h5 {
+    font-size: 12px; }
+  body #intro {
+    width: 100%;
+    text-align: center;
+    padding: 40px 10px 40px 10px;
+    margin-top: 90px;
+    background: #A3B7A3; }
+    body #intro .boxes {
+      vertical-align: top;
+      margin: 20px 0px;
+      padding: 10px;
+      display: inline-block;
+      width: 300px;
+      background: rgba(2, 56, 0, 0.5); }
+  body li {
+    text-align: left;
+    list-style: none; }
+  body .slimHeader {
+    height: 60px;
+    padding-top: 0px; }
+    body .slimHeader h1 {
+      font-size: 35px; }
+
+/*# sourceMappingURL=main.css.map */
