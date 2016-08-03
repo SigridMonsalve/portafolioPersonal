@@ -30,7 +30,7 @@ body {
       margin-bottom: 0;
       font-family: "Yantramanav";
       font-weight: 300;
-      font-size: 75px;
+      font-size: 5vw;
       display: inline; }
       body header h1 .peque {
         font-size: 30px; }
@@ -38,9 +38,9 @@ body {
           font-weight: 700; }
     body header a {
       color: black;
-      vertical-align: baseline;
+      vertical-align: top;
       float: right;
-      margin: 30px 10px 10px 10px;
+      margin: 2vw 0.7vw 0vw 0.7vw;
       border-radius: 5px;
       text-decoration: none;
       height: 25px;
