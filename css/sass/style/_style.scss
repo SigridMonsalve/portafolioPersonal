@@ -7,9 +7,9 @@ body{
 	margin:0;
 	header{
 		background:darken(rgb(255,255,255),5%);
-		padding:10px 10px 0px 10px;
+		padding:20px 10px 0px 10px;
 		position:fixed;
-		height:90px;
+		height:130px;
 		width:100%;
 		top:0px;
 		z-index:100;
@@ -25,18 +25,16 @@ body{
 			margin-bottom:0;
 			font-family:$dos;
 			font-weight:300;
-			font-size:55px;
-			span:not(.peque){
-			}
+			font-size:75px;
 			.peque{
-				font-size:20px;
+				font-size:30px;
 				span{
 					font-weight:700;
 				}
 			}
 		}
 	}
-	h4,h5{
+	h2{
 		margin:0;
 		font-family:$dos;
 		font-weight:300;
@@ -45,24 +43,21 @@ body{
 			font-weight:700;
 		}
 		span{
-			font-size:16px;
+			font-size:22px;
 		}
-	}
-	h5{
-		font-size:12px;
 	}
 	#intro{
 		width:100%;
 		text-align:center;
-		padding:40px 10px 40px 10px;
-		margin-top:90px;
+		padding:50px 10px 50px 10px;
+		margin-top:130px;
 		background:$background;
 		.boxes{
 			vertical-align:top;
-			margin:20px 0px;
+			margin:50px 0px;
 			padding:10px;
 			display:inline-block;
-			width:300px;
+			width:400px;
 			background:$boxes;
 		}
 	}

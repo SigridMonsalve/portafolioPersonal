@@ -7,9 +7,9 @@ body {
     box-sizing: border-box; }
   body header {
     background: #f2f2f2;
-    padding: 10px 10px 0px 10px;
+    padding: 20px 10px 0px 10px;
     position: fixed;
-    height: 90px;
+    height: 130px;
     width: 100%;
     top: 0px;
     z-index: 100;
@@ -25,34 +25,32 @@ body {
       margin-bottom: 0;
       font-family: "Yantramanav";
       font-weight: 300;
-      font-size: 55px; }
+      font-size: 75px; }
       body header h1 .peque {
-        font-size: 20px; }
+        font-size: 30px; }
         body header h1 .peque span {
           font-weight: 700; }
-  body h4, body h5 {
+  body h2 {
     margin: 0;
     font-family: "Yantramanav";
     font-weight: 300;
     color: #353d2f; }
-    body h4 b, body h5 b {
+    body h2 b {
       font-weight: 700; }
-    body h4 span, body h5 span {
-      font-size: 16px; }
-  body h5 {
-    font-size: 12px; }
+    body h2 span {
+      font-size: 22px; }
   body #intro {
     width: 100%;
     text-align: center;
-    padding: 40px 10px 40px 10px;
-    margin-top: 90px;
+    padding: 50px 10px 50px 10px;
+    margin-top: 130px;
     background: #A3B7A3; }
     body #intro .boxes {
       vertical-align: top;
-      margin: 20px 0px;
+      margin: 50px 0px;
       padding: 10px;
       display: inline-block;
-      width: 300px;
+      width: 400px;
       background: rgba(2, 56, 0, 0.5); }
   body li {
     text-align: left;
