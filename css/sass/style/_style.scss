@@ -6,6 +6,8 @@ body{
 	}
 	margin:0;
 	header{
+		@include transition(all,0.5s);
+		@include shadow;
 		background:darken(rgb(255,255,255),5%);
 		padding:20px 10px 0px 10px;
 		position:fixed;
@@ -13,24 +15,40 @@ body{
 		width:100%;
 		top:0px;
 		z-index:100;
-		-webkit-box-shadow: 0 3px 2px -2px #023800;
-		box-shadow: 0 3px 2px -2px #023800;
-		-webkit-transition: all 0.5s;
-	    -moz-transition: all 0.5s;
-	    -ms-transition: all 0.5s;
-	    -o-transition: all 0.5s;
-	    transition: all 0.5s;
 		h1{
+			@include transition(all,0.5s);
 			margin-top:0.2em;
 			margin-bottom:0;
 			font-family:$dos;
 			font-weight:300;
 			font-size:75px;
+			display:inline;
+
 			.peque{
 				font-size:30px;
 				span{
 					font-weight:700;
 				}
+			}
+		}
+		a{
+			color:black;
+			vertical-align:baseline;
+			float:right;
+			margin:30px 10px 10px 10px;
+			border-radius:5px;
+			text-decoration:none;
+			height:25px;
+			padding:3px;
+			box-sizing:content-box;
+			display:inline-block;
+			@include transition(box-shadow,0.4s);
+			i{
+				font-size:25px;
+			}
+			&:hover{
+				box-shadow: inset 0 0 0 7px black;
+				@include transition(box-shadow,0.4s);
 			}
 		}
 	}
@@ -53,16 +71,58 @@ body{
 		margin-top:130px;
 		background:$background;
 		.boxes{
+			@include shadow;
 			vertical-align:top;
-			margin:50px 0px;
+			margin:50px 10px;
 			padding:10px;
 			display:inline-block;
 			width:400px;
 			background:$boxes;
+			position:relative;
+			@include transition(all,0.5s);
+			ul{
+				padding:0;
+				li{	
+					text-align:left;
+					list-style:none;
+					display:inline;
+					margin:0px 5px;
+				}
+			}
+			.over{
+				display:none;
+				height:100%;
+				width:100%;
+				background:$boxes;
+				position:absolute;
+				margin-left:-10px;
+				top:0;
+				padding:10%;
+				@include transition(all,0.3s);
+				button,p{
+					font-size:30px;
+					color:$white;
+					background:none;
+					border:none;
+					display:inline;
+				}
+				button{
+					cursor:pointer;
+					&:hover{
+						font-size:35px;
+						@include transition(all,0.3s);
+					}
+				}
+			}	
+			&:hover{@include transition(all,0.5s);
+				background:darken($boxes,100%);
+				-webkit-box-shadow: 0 0 3px 4px darken($boxes,100%);
+				box-shadow: 0 0 3px 4px darken($boxes,100%);
+				.over{
+					display:block;
+				}
+			}		
 		}
-	}
-	li{	text-align:left;
-		list-style:none;
 	}
 	.slimHeader{
 		height:60px;
@@ -70,6 +130,5 @@ body{
 		h1{
 			font-size:35px;
 		}
-		
 	}
 }
