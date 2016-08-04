@@ -5,6 +5,24 @@ body {
   body * {
     font-family: "Yantramanav";
     box-sizing: border-box; }
+  body header, body section, body footer {
+    padding: 20px 10px 0px 10px; }
+  body h1 {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    font-family: "Yantramanav";
+    font-weight: 300;
+    font-size: 4vw;
+    display: inline; }
+    body h1 .peque {
+      font-size: 30px; }
+      body h1 .peque span {
+        font-weight: 700; }
   body header {
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
@@ -14,33 +32,25 @@ body {
     -webkit-box-shadow: 0 3px 2px -2px #023800;
     box-shadow: 0 3px 2px -2px #023800;
     background: #f2f2f2;
-    padding: 20px 10px 0px 10px;
     position: fixed;
     height: 130px;
     width: 100%;
     top: 0px;
     z-index: 100; }
-    body header h1 {
-      -webkit-transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -ms-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear;
-      margin-top: 0.2em;
-      margin-bottom: 0;
-      font-family: "Yantramanav";
-      font-weight: 300;
-      font-size: 5vw;
-      display: inline; }
-      body header h1 .peque {
-        font-size: 30px; }
-        body header h1 .peque span {
-          font-weight: 700; }
+    body header div:first-child {
+      width: 20vw;
+      display: inline-block; }
+    body header div:nth-child(2) {
+      width: 40vw;
+      display: inline-block; }
+    body header div:nth-child(3) {
+      width: 30vw;
+      display: inline-block; }
     body header a {
       color: black;
       vertical-align: top;
       float: right;
-      margin: 2vw 0.7vw 0vw 0.7vw;
+      margin: 1vw 0.7vw 0vw 0.7vw;
       border-radius: 5px;
       text-decoration: none;
       height: 25px;
@@ -80,7 +90,7 @@ body {
       -webkit-box-shadow: 0 3px 2px -2px #023800;
       box-shadow: 0 3px 2px -2px #023800;
       vertical-align: top;
-      margin: 50px 10px;
+      margin: 50px 10px 0px 10px;
       padding: 10px;
       display: inline-block;
       width: 400px;
@@ -92,54 +102,67 @@ body {
       -o-transition: all 0.5s linear;
       transition: all 0.5s linear; }
       body #intro .boxes ul {
+        font-size: 18px;
         padding: 0; }
         body #intro .boxes ul li {
           text-align: left;
           list-style: none;
           display: inline;
           margin: 0px 5px; }
-      body #intro .boxes .over {
-        display: none;
-        height: 100%;
-        width: 100%;
-        background: rgba(2, 56, 0, 0.5);
-        position: absolute;
-        margin-left: -10px;
-        top: 0;
-        padding: 10%;
+          body #intro .boxes ul li img {
+            height: 46px;
+            width: auto; }
+    body #intro .not-inline ul {
+      padding: 15px; }
+      body #intro .not-inline ul li {
+        display: block; }
+  body #portafolio .desktop, body #portafolio .app {
+    height: 184px;
+    margin: 20px;
+    border: 2px solid #353d2f;
+    display: inline-block; }
+    body #portafolio .desktop a, body #portafolio .app a {
+      display: inline-block;
+      height: 180px; }
+    body #portafolio .desktop img, body #portafolio .app img {
+      height: 180px; }
+    body #portafolio .desktop a:first-child, body #portafolio .app a:first-child {
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      /* For IE8 and earlier */ }
+      body #portafolio .desktop a:first-child:hover, body #portafolio .app a:first-child:hover {
         -webkit-transition: all 0.3s linear;
         -moz-transition: all 0.3s linear;
         -ms-transition: all 0.3s linear;
         -o-transition: all 0.3s linear;
-        transition: all 0.3s linear; }
-        body #intro .boxes .over button, body #intro .boxes .over p {
-          font-size: 30px;
-          color: #F2F2F2;
-          background: none;
-          border: none;
-          display: inline; }
-        body #intro .boxes .over button {
-          cursor: pointer; }
-          body #intro .boxes .over button:hover {
-            font-size: 35px;
-            -webkit-transition: all 0.3s linear;
-            -moz-transition: all 0.3s linear;
-            -ms-transition: all 0.3s linear;
-            -o-transition: all 0.3s linear;
-            transition: all 0.3s linear; }
-      body #intro .boxes:hover {
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.5s linear;
-        -ms-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        transition: all 0.5s linear;
-        background: rgba(0, 0, 0, 0.5);
-        -webkit-box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.5); }
-        body #intro .boxes:hover .over {
-          display: block; }
+        transition: all 0.3s linear;
+        opacity: 1.0;
+        filter: alpha(opacity=100);
+        /* For IE8 and earlier */ }
+    body #portafolio .desktop a:nth-child(2), body #portafolio .app a:nth-child(2) {
+      float: left; }
+      body #portafolio .desktop a:nth-child(2):hover, body #portafolio .app a:nth-child(2):hover {
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        /* For IE8 and earlier */ }
+  body #contacto {
+    background: #F2F2F2;
+    padding: 40px;
+    text-align: center; }
+    body #contacto p:not(first-child) {
+      margin: 0px; }
   body .slimHeader {
-    height: 60px;
+    height: 83px;
     padding-top: 0px; }
     body .slimHeader h1 {
       font-size: 35px; }

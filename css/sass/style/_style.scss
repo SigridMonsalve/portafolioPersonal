@@ -5,23 +5,16 @@ body{
 		box-sizing:border-box;
 	}
 	margin:0;
-	header{
-		@include transition(all,0.5s);
-		@include shadow;
-		background:darken(rgb(255,255,255),5%);
+	header,section,footer{
 		padding:20px 10px 0px 10px;
-		position:fixed;
-		height:130px;
-		width:100%;
-		top:0px;
-		z-index:100;
-		h1{
+	}
+	h1{
 			@include transition(all,0.5s);
 			margin-top:0.2em;
 			margin-bottom:0;
 			font-family:$dos;
 			font-weight:300;
-			font-size:5vw;
+			font-size:4vw;
 			display:inline;
 			.peque{
 				font-size:30px;
@@ -30,11 +23,32 @@ body{
 				}
 			}
 		}
+	header{
+		@include transition(all,0.5s);
+		@include shadow;
+		background:darken(rgb(255,255,255),5%);
+		position:fixed;
+		height:130px;
+		width:100%;
+		top:0px;
+		z-index:100;
+		div:first-child{
+			width:20vw;
+			display:inline-block;
+		}
+		div:nth-child(2){
+			width:40vw;
+			display:inline-block;
+		}
+		div:nth-child(3){
+			width:30vw;
+			display:inline-block;
+		}
 		a{
 			color:black;
 			vertical-align:top;
 			float:right;
-			margin:2vw 0.7vw 0vw 0.7vw;
+			margin:1vw 0.7vw 0vw 0.7vw;
 			border-radius:5px;
 			text-decoration:none;
 			height:25px;
@@ -72,7 +86,7 @@ body{
 		.boxes{
 			@include shadow;
 			vertical-align:top;
-			margin:50px 10px;
+			margin:50px 10px 0px 10px;
 			padding:10px;
 			display:inline-block;
 			width:400px;
@@ -80,51 +94,105 @@ body{
 			position:relative;
 			@include transition(all,0.5s);
 			ul{
+				font-size:18px;
 				padding:0;
 				li{	
 					text-align:left;
 					list-style:none;
 					display:inline;
 					margin:0px 5px;
-				}
-			}
-			.over{
-				display:none;
-				height:100%;
-				width:100%;
-				background:$boxes;
-				position:absolute;
-				margin-left:-10px;
-				top:0;
-				padding:10%;
-				@include transition(all,0.3s);
-				button,p{
-					font-size:30px;
-					color:$white;
-					background:none;
-					border:none;
-					display:inline;
-				}
-				button{
-					cursor:pointer;
-					&:hover{
-						font-size:35px;
-						@include transition(all,0.3s);
+					img{
+						height:46px;
+						width:auto;
 					}
 				}
-			}	
-			&:hover{@include transition(all,0.5s);
-				background:darken($boxes,100%);
-				-webkit-box-shadow: 0 0 3px 4px darken($boxes,100%);
-				box-shadow: 0 0 3px 4px darken($boxes,100%);
-				.over{
+			}
+			// .over{
+			// 	display:none;
+			// 	height:100%;
+			// 	width:100%;
+			// 	background:$boxes;
+			// 	position:absolute;
+			// 	margin-left:-10px;
+			// 	top:0;
+			// 	padding:10%;
+			// 	@include transition(all,0.3s);
+			// 	button,p{
+			// 		font-size:30px;
+			// 		color:$white;
+			// 		background:none;
+			// 		border:none;
+			// 		display:inline;
+			// 	}
+			// 	button{
+			// 		cursor:pointer;
+			// 		&:hover{
+			// 			font-size:35px;
+			// 			@include transition(all,0.3s);
+			// 		}
+			// 	}
+			// }	
+			// &:hover{@include transition(all,0.5s);
+			// 	background:darken($boxes,100%);
+			// 	-webkit-box-shadow: 0 0 3px 4px darken($boxes,100%);
+			// 	box-shadow: 0 0 3px 4px darken($boxes,100%);
+			// 	.over{
+			// 		display:block;
+			// 	}
+			// }		
+		}
+		.not-inline{
+			ul{	
+			padding:15px;
+				li{
 					display:block;
 				}
-			}		
+			}
+		}
+	}
+	#portafolio{
+		.desktop,.app{
+			height:184px;
+			margin:20px;
+			border:2px solid $font;
+			display:inline-block;
+			a{
+				display:inline-block;
+				height:180px;
+			}
+			img{
+				height:180px;
+			}
+			a:first-child{
+				@include transition(all,0.3s);
+			    opacity: 0.5;
+			    filter: alpha(opacity=50); /* For IE8 and earlier */
+				&:hover {
+					@include transition(all,0.3s);
+				    opacity: 1.0;
+				    filter: alpha(opacity=100); /* For IE8 and earlier */
+				}
+			}
+			a:nth-child(2){
+				float:left;
+				&:hover{
+					@include transition(all,0.3s);
+					opacity: 0.5;
+    				filter: alpha(opacity=50); /* For IE8 and earlier */
+				}
+			}
+		}
+	}
+	#contacto{
+		background:$white;
+		padding:40px;
+		text-align:center;
+		p:not(first-child){
+			margin:0px;
 		}
 	}
 	.slimHeader{
-		height:60px;
+		height:83px;
 		padding-top:0px;
 		h1{
 			font-size:35px;
